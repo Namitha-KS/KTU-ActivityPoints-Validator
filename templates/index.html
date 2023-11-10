@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTU Activity Points Validator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">KTU Activity Points Validator</h1>
+        <form action="/process_upload" method="post" enctype="multipart/form-data" id="uploadForm">
+            <label for="fileUpload">Choose a PDF file or screenshot image:</label>
+            <input type="file" name="fileUpload" id="fileUpload" accept=".pdf, .png, .jpg, .jpeg" required>
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+        <div id="result" class="result"></div>
+        
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
