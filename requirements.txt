@@ -1,0 +1,5 @@
+Flask
+nltk
+Pillow
+easyocr
+numpy
